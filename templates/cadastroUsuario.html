@@ -1,0 +1,61 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+         href="../static/css/style.css">
+    <title>Tela de Cadastro</title>
+</head>
+<body>
+    <div class="homeBox">
+        <h1>
+            Sistema da Louja
+        </h1>
+        <br>
+    </div>
+
+    <div class="iniciarCadastro">
+        <h3>Cadastro de Usuario:</h3>
+        <form action="/cadastroUsuario" method="post">
+            <label>
+                Usuario:
+            </label>
+            <input type="text" id="login" name="login">
+            
+            <label>
+                Senha:
+            </label>
+            
+            <input type="password" id="senha" name="senha">
+
+            <input type="submit" value="enviar" class="btn">
+            <div>
+                <span>
+                    Tipo de Usuario:
+                </span>
+                
+                <div>
+                    <div>
+                        <input type="radio" name="tipoUser" id="normal" value="normal">
+                        <label for="nomal">
+                            Normal
+                        </label>
+                    </div>
+                    <div>
+                        <input type="radio" name="tipoUser" id="super" value="super">
+                        <label for="super">
+                            Super
+                        </label>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </form>
+        
+    </div>
+    
+    
+</body>
+</html>
