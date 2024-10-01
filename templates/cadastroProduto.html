@@ -2,9 +2,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style4.css">
     <title>Cadastro de Produto</title>
 </head>
 <body>
-    <h1>Sistema da Louja</h1>
+  
+    <div class="container">
+        <form action="/cadastroProduto" method="post">
+            <h2>Cadastre seu produto</h2>
+            <label for="produto">Produto</label>
+            <input type="text" placeholder="Nome do produto" name="nome" required>
+            <label for="qtde">Quantidade</label>
+            <input type="number" placeholder="Quantidade do produto" name="qtde" required>
+            <label for="preco">Preço</label>
+            <input type="number" placeholder="Preço do produto" name="preco" required>
+            
+            <button type="submit" id="btnEnviarProduto" onclick="salvar()">
+                Enviar
+            </button>
+
+        </form>
+
+    </div>
+
+    
+
 </body>
 </html>

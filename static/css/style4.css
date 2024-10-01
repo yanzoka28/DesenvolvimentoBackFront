@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,58 +9,46 @@ body {
     height: 100vh;
 }
 
-.homeBox {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.homeBox h1 {
-    color: #333;
-}
-
-.homeBox h3 {
-    color: #666;
-}
-
-.iniciarCadastro {
+.container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
 }
 
-.iniciarCadastro form {
-    display: flex;
-    flex-direction: column;
-}
-
-.iniciarCadastro label {
-    margin-bottom: 5px;
+.container h2 {
     color: #333;
+    margin-bottom: 20px;
 }
 
-.iniciarCadastro input[type="text"],
-.iniciarCadastro input[type="password"] {
+.container label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+.container input[type="text"],
+.container input[type="number"] {
+    width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.iniciarCadastro .btn, .btnLogin {
+.container button {
+    width: 100%;
     padding: 10px;
     background-color: #007bff;
-    color: #fff;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.iniciarCadastro .btn:hover {
+.container button:hover {
     background-color: #0056b3;
 }
-
-.btnLogin a{
-    text-decoration: none;
-}
-
