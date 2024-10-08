@@ -1,70 +1,86 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #4b0082, #8b00ff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
 }
 
 .pgHome {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     text-align: center;
 }
 
 .pgHome a {
+    color: white;
+    font-size: 1.5em;
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    margin: 10px;
+    margin-right: 20px;
 }
 
-.pgHome a:hover {
-    color: #007bff;
-}
-
-.boxCadastro {
-    position: relative;
-    display: inline-block;
-}
-
-.btnCadastro {
-    background-color: #007bff;
+.pgHome .botaoLogout {
+    background-color: #4b0082;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
 }
 
-.btnCadastro i {
-    margin-left: 5px;
+.pgHome .botaoLogout:hover {
+    background-color: #8b00ff;
 }
 
-.boxOpcoesCadastro {
+.boxCadastro {
+    margin-top: 20px;
+}
+
+.boxCadastro .btnCadastro {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.5em;
+}
+
+.boxCadastro .btnCadastro:hover {
+    background-color: #8b00ff;
+}
+
+.boxCadastro .boxOpcoesCadastro {
     display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    flex-direction: column;
+    margin-top: 10px;
 }
 
-.boxOpcoesCadastro a {
-    color: black;
-    padding: 12px 16px;
+.boxCadastro .btnCadastro:focus + .boxOpcoesCadastro,
+.boxCadastro .boxOpcoesCadastro:hover {
+    display: flex;
+}
+
+.boxCadastro .boxOpcoesCadastro a {
+    color: #fff;
+    background-color: #8b00ff;
+    padding: 10px;
+    margin: 5px 0;
     text-decoration: none;
-    display: block;
-    text-align: left;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
 }
 
-.boxOpcoesCadastro a:hover {
-    background-color: #f1f1f1;
+.boxCadastro .boxOpcoesCadastro a:hover {
+    background-color: #4b0082;
 }
 
-.boxCadastro:hover .boxOpcoesCadastro {
-    display: block;
+footer p {
+    color: white;
+    font-size: 1em;
 }

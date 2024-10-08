@@ -48,34 +48,37 @@ def cadastroUsuario(loginUser, senha, tipoUser):
         conexao.close()
         return False
     
-    
-    
 def cadastroProduto(loginUser, tipoUser, nome, qtde, preco):
     conexao = conectardb()
     cur = conexao.cursor()
     
     cur.execute(f"SELECT count(*) FROM Produto WHERE loginUser = '{loginUser}'" )
     recset = cur.fetchall()
+  
     
     QtdeProduto = recset[0][0]
-    
+    print("ate aqui okay")
     if tipoUser == "normal" and QtdeProduto >= 3:
         print("Limite de produtos atingido em usuarios Normais")
         conexao.close()
+        print("2")
         return False 
-    else:
     
+    else:
         cur.execute(f"INSERT INTO Produto (nome, qtde, preco, loginuser) VALUES ('{nome}', '{qtde}', '{preco}', '{loginUser}')")
         conexao.commit()
         conexao.close()
+        print("entrou")
         return True
 
  
- 
- 
+def listarProdutos():
+    conexao = conectardb()
+    cur = conexao.cursor()
+
+    cur.execute(f"SELECT * FROM Protudo")
     
-#    cur.execute(f"SELECT tipoUser FROM Usuario WHERE loginUser = '{loginUser}'")
-#   recset = cur.fetchall()
+    
     
     
     

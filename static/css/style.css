@@ -1,12 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(to right, #4b0082, #8b00ff);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .homeBox {
@@ -15,52 +14,68 @@ body {
 }
 
 .homeBox h1 {
-    color: #333;
-}
-
-.homeBox h3 {
-    color: #666;
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px #4b0082;
 }
 
 .iniciarCadastro {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px #4b0082;
+    text-align: center;
 }
 
-.iniciarCadastro form {
-    display: flex;
-    flex-direction: column;
+.iniciarCadastro h3 {
+    margin: 0 0 20px;
+    color: #4b0082;
+    font-size: 2em;
 }
 
 .iniciarCadastro label {
-    margin-bottom: 5px;
-    color: #333;
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #4b0082;
 }
 
 .iniciarCadastro input[type="text"],
-.iniciarCadastro input[type="password"] {
+.iniciarCadastro input[type="password"],
+.iniciarCadastro input[type="radio"]{
+    width: 80%;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    margin: 10px 0;
+    border: 2px solid #4b0082;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
-.iniciarCadastro .btn, .btnLogin {
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
+.iniciarCadastro input[type="submit"] {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.iniciarCadastro .btn:hover {
-    background-color: #0056b3;
+.iniciarCadastro input[type="submit"]:hover {
+    background-color: #8b00ff;
 }
 
-.btnLogin a{
+.btnLogin {
+    margin-top: 20px;
+}
+
+.btnLogin a {
+    color: #8b00ff;
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+.btnLogin a:hover {
+    color: #4b0082;
+}
