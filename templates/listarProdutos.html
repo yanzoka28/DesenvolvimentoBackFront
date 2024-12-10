@@ -3,10 +3,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listar Produtos</title>
+    <script src="/static/js/listarProdutos.js" defer></script>
+    <link rel="stylesheet"
+    href="../static/css/style5.css">
 </head>
-<body>
-    <h1>
-        listando produtos ;-;
-    </h1>
-</body>
+<body> 
+    <div class="pgProduto">
+        <h1>Lista de Produtos</h1> 
+        <table> 
+            <thead> 
+                <tr> 
+                    <th>Nome</th> 
+                    <th>Quantidade</th> 
+                    <th>Preço</th> 
+                </tr> 
+
+            </thead> 
+                <tbody id="tabelaProdutos"></tbody> 
+
+                <tbody> 
+                    {% for produto in produtos %} 
+                    <tr> 
+                 
+                        <td>{{ produto.nome }}</td> 
+                        <td>{{ produto.qtde }}</td> 
+                        <td>{{ produto.preco }}</td> 
+
+                    </tr> {% endfor %} </tbody>
+
+        </table>
+
+        <button type="button">
+            <a href="/grafProduto"> Grafico de vendas </a>
+            
+
+        </button>
+
+        
+        
+    </div>
+</body>    
 </html>
+

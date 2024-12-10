@@ -41,7 +41,8 @@ body {
     box-sizing: border-box;
 }
 
-.container input[type="submit"] {
+.container input[type="submit"],
+.container button {
     background-color: #4b0082;
     color: white;
     padding: 10px 20px;
@@ -49,8 +50,20 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top: 10px;
+    display: inline-block;
 }
 
-.container input[type="submit"]:hover {
+.container input[type="submit"]:hover,
+.container button:hover {
     background-color: #8b00ff;
+}
+
+.container button a {
+    color: white;
+    text-decoration: none;
+}
+
+.container button a:hover {
+    color: white;
 }

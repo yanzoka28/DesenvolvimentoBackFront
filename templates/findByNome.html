@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscar Produto por Nome</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/findByNome.js') }}"></script>
+    <link rel="stylesheet" href="../static/css/style8.css">
+
+</head>
+<body>
+    <h1>Buscar Produto por ID</h1>
+    <div class="campoBack">
+        <div class="containerForms">
+
+            <form id="findProductForm">
+                <label for="productNome">Nome do Produto:</label>
+                <input type="text" id="productNome" name="nome" required>
+                <button type="submit">Buscar</button>
+            </form>
+
+        </div>
+
+    </div>
+
+    <div class="detalhes" 
+        id="productDetails">
+    </div>
+</body>
+</html>
